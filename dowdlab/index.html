@@ -1,21 +1,64 @@
-<main class="main-content">
-    <section class="hero-section">
-        <div class="hero-overlay">
-            <h1>The Dowd Lab</h1>
-            <p class="subtitle">Medicinal Chemistry & Drug Discovery</p>
-            <div class="hero-line"></div>
-            <p class="mission">We design and synthesize small molecule inhibitors to combat global infectious diseases, focusing on novel targets in <em>M. tuberculosis</em> and <em>Plasmodium falciparum</em>.</p>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dowd Lab | Home</title>
+    <style>
+        /* ALL YOUR CSS GOES HERE DIRECTLY */
+        :root { --teal: #007399; --navy: #004a61; }
+        body { margin: 0; font-family: 'Inter', sans-serif; display: flex; background: #f4f7f6; }
+        
+        .sidebar { 
+            width: 250px; height: 100vh; background: var(--navy); 
+            color: white; position: fixed; padding: 30px; 
+        }
+        
+        .main-content { margin-left: 310px; padding: 50px; width: 100%; }
+        
+        .hero { 
+            background: var(--teal); color: white; padding: 60px; 
+            border-radius: 15px; text-align: center; margin-bottom: 40px;
+        }
 
-    <section class="home-grid">
-        <div class="home-card">
-            <h3>Our Mission</h3>
-            <p>Utilizing structure-based design to develop next-generation therapeutics for drug-resistant pathogens.</p>
+        .card { 
+            background: white; padding: 25px; border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px; 
+        }
+        
+        h3 { color: var(--teal); margin-top: 0; }
+        nav a { color: #acc; text-decoration: none; display: block; margin: 15px 0; font-weight: bold; }
+        nav a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div style="border: 2px solid white; padding: 10px; text-align: center; font-weight: bold; font-size: 24px;">Do</div>
+        <div style="margin-top: 40px;">
+            <a href="index.html">Home</a>
+            <a href="csd.html">CSD (PI)</a>
+            <a href="members.html">Members</a>
+            <a href="research.html">Research</a>
         </div>
-        <div class="home-card">
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>The Dowd Lab</h1>
+            <p>Medicinal Chemistry & Drug Discovery</p>
+        </section>
+
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>We design and synthesize small molecule inhibitors to combat global infectious diseases, focusing on novel targets in M. tuberculosis and Plasmodium falciparum.</p>
+        </div>
+
+        <div class="card">
             <h3>Collaboration</h3>
             <p>We work at the intersection of chemistry, biology, and pharmacology within the GW Columbian College of Arts & Sciences.</p>
         </div>
-    </section>
-</main>
+    </main>
+
+</body>
+</html>
