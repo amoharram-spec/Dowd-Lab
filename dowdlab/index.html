@@ -5,60 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Dowd Lab | Home</title>
     <style>
-        /* ALL YOUR CSS GOES HERE DIRECTLY */
-        :root { --teal: #007399; --navy: #004a61; }
-        body { margin: 0; font-family: 'Inter', sans-serif; display: flex; background: #f4f7f6; }
+        :root { --teal: #007399; --navy: #004a61; --bg: #f4f7f6; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background: var(--bg); min-height: 100vh; }
         
-        .sidebar { 
-            width: 250px; height: 100vh; background: var(--navy); 
-            color: white; position: fixed; padding: 30px; 
-        }
-        
-        .main-content { margin-left: 310px; padding: 50px; width: 100%; }
-        
-        .hero { 
-            background: var(--teal); color: white; padding: 60px; 
-            border-radius: 15px; text-align: center; margin-bottom: 40px;
-        }
+        /* Sidebar */
+        .sidebar { width: 260px; background: var(--navy); color: white; position: fixed; height: 100vh; padding: 40px 20px; box-sizing: border-box; }
+        .logo-periodic { width: 60px; height: 60px; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 24px; margin-bottom: 30px; }
+        .nav-links { list-style: none; padding: 0; }
+        .nav-links li { margin-bottom: 20px; }
+        .nav-links a { color: #acc; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a:hover { color: white; padding-left: 5px; }
 
-        .card { 
-            background: white; padding: 25px; border-radius: 10px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 20px; 
-        }
+        /* Content */
+        .main-content { margin-left: 260px; padding: 60px; width: 100%; box-sizing: border-box; }
+        .hero { background: white; padding: 60px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 8px solid var(--teal); margin-bottom: 40px; }
+        .hero h1 { color: var(--navy); margin: 0; font-size: 42px; }
+        .subtitle { color: var(--teal); font-weight: bold; font-size: 18px; margin: 10px 0 25px 0; }
         
-        h3 { color: var(--teal); margin-top: 0; }
-        nav a { color: #acc; text-decoration: none; display: block; margin: 15px 0; font-weight: bold; }
-        nav a:hover { color: white; }
+        .card { background: white; padding: 30px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .card h3 { color: var(--teal); margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        p { line-height: 1.6; color: #444; }
     </style>
 </head>
 <body>
-
     <nav class="sidebar">
-        <div style="border: 2px solid white; padding: 10px; text-align: center; font-weight: bold; font-size: 24px;">Do</div>
-        <div style="margin-top: 40px;">
-            <a href="index.html">Home</a>
-            <a href="csd.html">CSD (PI)</a>
-            <a href="members.html">Members</a>
-            <a href="research.html">Research</a>
-        </div>
+        <div class="logo-periodic">Do</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="csd.html">CSD (PI)</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
     </nav>
-
     <main class="main-content">
         <section class="hero">
             <h1>The Dowd Lab</h1>
-            <p>Medicinal Chemistry & Drug Discovery</p>
+            <p class="subtitle">Medicinal Chemistry & Drug Discovery</p>
+            <p>We design and synthesize small molecule inhibitors to combat global infectious diseases, focusing on novel targets in <em>M. tuberculosis</em> and <em>Plasmodium falciparum</em>.</p>
         </section>
-
         <div class="card">
             <h3>Our Mission</h3>
-            <p>We design and synthesize small molecule inhibitors to combat global infectious diseases, focusing on novel targets in M. tuberculosis and Plasmodium falciparum.</p>
+            <p>Utilizing structure-based design to develop next-generation therapeutics for drug-resistant pathogens.</p>
         </div>
-
         <div class="card">
             <h3>Collaboration</h3>
             <p>We work at the intersection of chemistry, biology, and pharmacology within the GW Columbian College of Arts & Sciences.</p>
         </div>
     </main>
-
 </body>
 </html>
